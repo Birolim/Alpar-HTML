@@ -7,7 +7,7 @@
   
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 160px; /* Altura do header + margem */
+    scroll-padding-top: 160px; 
   }
 
   body {
@@ -16,7 +16,6 @@
     line-height: 1.6;
   }
   
-  /* Header */
   header {
     background-color: #2d2d2d;
     padding: 2rem;
@@ -41,7 +40,6 @@
     font-weight: 300;
   }
   
-  /* Menu Lateral */
   aside {
     background-color: #252525;
     width: 250px;
@@ -76,7 +74,6 @@
     border-radius: 5px;
   }
   
-  /* Conteúdo Principal */
   main {
     margin-left: 250px;
     padding: 3rem;
@@ -95,6 +92,83 @@
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
   }
+
+  video, audio {
+    width: 100%;
+    max-width: 800px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border: 2px solid #4a4a4a;
+  }
+
+  video {
+    display: block; 
+    object-fit: cover; 
+    background-color: #1a1a1a; 
+    aspect-ratio: 16/9; 
+  }
+  
+  video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px #00ff9d33;
+    transition: all 0.3s ease;
+  }
+  
+  audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem 0;
+  }
+  
+  .media-group {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  
+  ::-webkit-media-controls-panel {
+    background-color: #2d2d2d !important;
+  }
+  
+  ::-webkit-media-controls-play-button,
+  ::-webkit-media-controls-mute-button {
+    filter: invert(1);
+  }
+  
+  article section h3 {
+    color: #00ff9d;
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.4rem;
+  }
+  
+  .episode-part {
+    background-color: #252525;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    main {
+      margin-left: 0;
+      padding: 1.5rem;
+      margin-top: 160px;
+    }
+  
+    aside {
+      display: none;
+    }
+  
+    footer {
+      margin-left: 0;
+      padding: 2rem;
+    }
+  
+    video, audio {
+      max-width: 100%;
+    }
+  }
   
   section {
     color: #cccccc;
@@ -106,7 +180,6 @@
     margin: 2rem 0;
   }
   
-  /* Footer - Participantes */
   footer {
     background-color: #2d2d2d;
     padding: 3rem;
