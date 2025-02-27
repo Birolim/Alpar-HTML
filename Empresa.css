@@ -1,0 +1,82 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+h1 {
+    margin: 0;
+    padding: 20px;
+    color: white;
+    background-color: #8B0000;
+    text-align: center;
+}
+
+/* Layout da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu lateral */
+td[valign="top"] {
+    padding: 20px;
+}
+
+td[width="20%"] {
+    background-color: #333;
+    color: white;
+}
+
+td[width="20%"] ul {
+    list-style: none;
+    padding: 0;
+}
+
+td[width="20%"] li {
+    padding: 10px;
+}
+
+td[width="20%"] a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+td[width="20%"] a:hover {
+    background: #8B0000;
+}
+
+/* Conteúdo principal */
+td[width="80%"] {
+    padding: 20px;
+}
+
+h2 {
+    color: #8B0000;
+}
+
+/* Rodapé */
+td[colspan="2"] {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Links gerais */
+a {
+    color: #8B0000;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
