@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Sombreamento */
+}
+
+label {
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombreamento interno */
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    margin-top: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.8; /* Transparência inicial */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Sombreamento */
+}
+
+button:hover {
+    background-color: #218838;
+    opacity: 1; /* Opacidade total ao passar o mouse */
+}

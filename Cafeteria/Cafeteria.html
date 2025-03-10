@@ -3,16 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Cafeteria/asets/css/cafeteiradesign.css">
+    <link rel="stylesheet" href="asets/css/cafeteiradesign.css"> 
     <title>Menu da Cafeteria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
+        body.dark-mode {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+
+        .toggle-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 2rem;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .toggle-button:focus {
+            outline: none;
+        }
+
+        .cup-empty::before {
+            content: '☕'; /* Xícara vazia */
+            font-size: 3rem;
+            color: #555;
+        }
+
+        .cup-full::before {
+            content: '☕'; /* Xícara cheia */
+            font-size: 3rem;
+            color: #1c1c1c;
+        }
+    </style>
 </head>
-<link rel="cafeteria" href="Cafeteira design.css">
 
 <body>
-    
-    <h1>Cafeteria e cervejaria BERR'OLINS</h1>
-    <img src="asets/fotos/logo Cafeteria e cervejaria. .webp" width= "300"  height="350"  alt="Assets-images-logo Cafeteria e cervejaria"
+    <h1>Cafeteria e Cervejaria BERR'OLINS</h1>
+    <img src="asets/fotos/logo Cafeteria e cervejaria. .webp" width="300" height="350" alt="Logo da Cafeteria e Cervejaria BERR'OLINS">
     
     <h2>Nosso Cardápio</h2>
     
@@ -20,14 +57,14 @@
     <ul>
         <li>Café Expresso
             <ul>
-                <li>Ingredientes: Café moído, água mineral voss</li>
+                <li>Ingredientes: Café moído, água mineral Voss</li>
                 <li>Aviso: Contém cafeína</li>
             </ul>
         </li>
         <li>Suco Natural
             <ul>
-                <li>Ingredientes: Frutas do dia, água voss</li>
-                <li>Aviso: Pode conter resquício de sementes</li>
+                <li>Ingredientes: Frutas do dia, água Voss</li>
+                <li>Aviso: Pode conter resquícios de sementes</li>
             </ul>
         </li>
     </ul>
@@ -64,7 +101,7 @@
         </li>
     </ul>
     
-
+    <h3>Horários de Funcionamento</h3>
     <table border="1">
         <thead>
             <tr>
@@ -117,22 +154,33 @@
         </tbody>
     </table>
     
+    <h3>Entre em contato:</h3>
+    <ul>
+        <li><a href="../index.html">Link para portfólio</a></li>
+        <li><a href="../Formulario/Formulario.html">Entre em contato</a></li>
+        <li><a href="../empresa atividade 2/Menu inicial da cafeteria.html">Menu apresentação empresa BEER'ollins</a></li>
+    </ul>
 
+    <!-- Botão de alternância de tema -->
+    <button class="toggle-button" id="toggleButton" onclick="toggleMode()">
+        <span id="cup" class="cup-empty"></span>
+    </button>
 
-    <h3>Entre em contato: </h3>
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            const cup = document.getElementById('cup');
 
-    
-    <a href="../portifo/Porti página inicial.html">link para port</a><br>
-
- <a href="../Formulario/Formulario.html">Entre em contato. </a><br>
-
-    <a href="../empresa atividade 2/Menu inicial da cafeteria.html">Menu apresentação empresa BEER'ollins</a><br>
-    
-
-
-
-    
-
-    
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                cup.classList.remove('cup-empty');
+                cup.classList.add('cup-full');
+            } else {
+                cup.classList.remove('cup-full');
+                cup.classList.add('cup-empty');
+            }
+        }
+    </script>
 </body>
 </html>
+

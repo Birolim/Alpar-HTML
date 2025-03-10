@@ -8,6 +8,13 @@ body {
     text-align: center;
     margin: 0;
     padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #f8f1e5;
 }
 
 h1 {
@@ -17,16 +24,29 @@ h1 {
     padding: 15px;
     border-radius: 10px;
     display: inline-block;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode h1 {
+    background-color: #6b4226;
+    color: #ffcc80;
 }
 
 img {
     border-radius: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
 }
 
 h2, h3 {
     color: #d2691e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s;
+}
+
+body.dark-mode h2, body.dark-mode h3 {
+    color: #ffcc80;
 }
 
 ul {
@@ -40,14 +60,25 @@ ul li {
     margin: 10px auto;
     width: 80%;
     border-radius: 10px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode ul li {
+    background-color: #555;
+    color: #f8f1e5;
 }
 
 ul li ul {
     background-color: #ffebcd;
     border-radius: 10px;
     padding: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode ul li ul {
+    background-color: #444;
 }
 
 table {
@@ -55,9 +86,14 @@ table {
     margin: 20px auto;
     border-collapse: collapse;
     background-color: #fff;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode table {
+    background-color: #333;
 }
 
 table, th, td {
@@ -73,6 +109,13 @@ th {
     background-color: #ffcc80;
     color: #5a3e2b;
     font-weight: bold;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode th {
+    background-color: #6b4226;
+    color: #ffcc80;
 }
 
 a {
@@ -84,8 +127,46 @@ a {
     margin: 10px;
     border-radius: 5px;
     transition: 0.3s;
+    opacity: 0.7;
 }
 
 a:hover {
     background-color: #8b4513;
+    opacity: 1;
+}
+
+/* Botão de alternância */
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.cup-empty::before {
+    content: '☕'; /* Xícara vazia */
+    font-size: 3rem;
+    color: #555;
+}
+
+.cup-full::before {
+    content: '☕'; /* Xícara cheia */
+    font-size: 3rem;
+    color: #1c1c1c;
+}
+
+body.dark-mode .cup-empty::before {
+    color: #f8f1e5;
+}
+
+body.dark-mode .cup-full::before {
+    color: #ffcc80;
 }
