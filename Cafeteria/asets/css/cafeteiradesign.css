@@ -1,4 +1,5 @@
 /* Importando uma fonte elegante do Google Fonts */
+/* Importando uma fonte elegante do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 body {
@@ -20,7 +21,7 @@ body.dark-mode {
 h1 {
     font-size: 2.5em;
     color: #8b4513;
-    background-color: #ffcc80;
+    background-color: #000000;
     padding: 15px;
     border-radius: 10px;
     display: inline-block;
@@ -28,57 +29,48 @@ h1 {
     transition: background-color 0.3s, color 0.3s;
 }
 
-body.dark-mode h1 {
-    background-color: #6b4226;
-    color: #ffcc80;
+/* Animação ao carregar */
+h1, h2, h3, ul, table {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 img {
     border-radius: 15px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
+    transition: transform 0.3s;
 }
 
-h2, h3 {
-    color: #d2691e;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: color 0.3s;
-}
-
-body.dark-mode h2, body.dark-mode h3 {
-    color: #ffcc80;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
+img:hover {
+    transform: scale(1.05);
 }
 
 ul li {
-    background-color: #fff;
+    background-color: #e0b403db;
     padding: 10px;
     margin: 10px auto;
     width: 80%;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-body.dark-mode ul li {
-    background-color: #555;
-    color: #f8f1e5;
-}
-
-ul li ul {
-    background-color: #ffebcd;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
-}
-
-body.dark-mode ul li ul {
-    background-color: #444;
+ul li:hover {
+    transform: scale(1.05);
 }
 
 table {
@@ -89,33 +81,12 @@ table {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden;
-    transition: background-color 0.3s;
-}
-
-body.dark-mode table {
-    background-color: #333;
-}
-
-table, th, td {
-    border: 1px solid #d2691e;
-}
-
-th, td {
-    padding: 15px;
-    text-align: center;
 }
 
 th {
     background-color: #ffcc80;
     color: #5a3e2b;
     font-weight: bold;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode th {
-    background-color: #6b4226;
-    color: #ffcc80;
 }
 
 a {
@@ -126,12 +97,12 @@ a {
     padding: 10px 15px;
     margin: 10px;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: transform 0.3s;
     opacity: 0.7;
 }
 
 a:hover {
-    background-color: #8b4513;
+    transform: scale(1.1);
     opacity: 1;
 }
 
@@ -147,26 +118,14 @@ a:hover {
     z-index: 1000;
 }
 
-.toggle-button:focus {
-    outline: none;
-}
-
 .cup-empty::before {
-    content: '☕'; /* Xícara vazia */
+    content: '☕';
     font-size: 3rem;
     color: #555;
 }
 
 .cup-full::before {
-    content: '☕'; /* Xícara cheia */
+    content: '☕';
     font-size: 3rem;
     color: #1c1c1c;
-}
-
-body.dark-mode .cup-empty::before {
-    color: #f8f1e5;
-}
-
-body.dark-mode .cup-full::before {
-    color: #ffcc80;
 }
